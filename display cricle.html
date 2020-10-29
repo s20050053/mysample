@@ -1,0 +1,71 @@
+
+<!DOCTYPE html>
+<html lang="zh-Hant-HK">
+<head>
+    <title>Learning jQuery</title>
+
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script type="text/javascript" src="jquery.min.js"></script>
+    <style>
+
+    #cricle{
+      width:200px;
+      height:200px;
+      background-color: #A7568B;
+      border-radius: 50%;
+    }
+
+    .square{
+      width:200px;
+      height:200px;
+      background-color: #E86D5E;
+      margin-top: 10px;
+
+    }
+
+    </style>
+
+
+</head>
+
+<body>
+<div id="cricle"></div>
+<button id="b1">消 退</button>
+<button id="b2">顯 示</button>
+<!-- <p>這是一段文字</p> -->
+
+<!-- <iframe width="800px" height="600px" src="http://ken-cens.com"></iframe> -->
+
+
+<script type="text/javascript">
+$("#cricle").click(function(){
+
+  $(this).animate({
+    width: "400px",
+    height:"500px",
+    marginLeft: "100px"
+
+  },1500);
+});
+// if(typeof jQuery!="undefined"){
+//   alert("ok");
+// }else{
+//   alert("no");
+// }
+$("#b1").click(function(){
+  // $(".square").hide();
+  $("#cricle").fadeOut(3000,function(){
+    alert("消退己完成")
+  });
+});
+
+$("#b2").click(function(){
+  $("#cricle").fadeIn();
+});
+
+</script>
+
+
+</body>
+</html>

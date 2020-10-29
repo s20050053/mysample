@@ -1,0 +1,150 @@
+
+<!DOCTYPE html>
+<html lang="zh-Hant-HK">
+<head>
+    <title>驗證表單</title>
+
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script type="text/javascript" src="https://ajax.aspnetcdn.com/ajax/jquery.ui/1.10.4/jquery-ui.min.js"></script>
+    <style>
+
+    body{
+      background-color: #F2F3F5;
+    }
+
+    #container{
+      padding-top: 60px;
+      width: 600px;
+      margin: auto;
+      font-family: "Helvetica Neue", "Helvetica", "Arial";
+
+    }
+
+    .input-style{
+      border-radius: 5px;
+      border: 1px solid grey;
+      font-size:1.1em;
+      padding-left: 20px;
+      margin-bottom: 10px;
+    }
+
+
+
+    .input-width{
+      width: 300px;
+      height: 40px;
+    }
+
+    #email-gender{
+      width: 323px;
+      height: 40px;
+    }
+
+    label{
+      width: 200px;
+      float:left;
+      font-size: 1.2em;
+      padding-top: 8px;
+    }
+
+    #mail-massage{
+      width: 500px;
+      padding-top: 15px;
+
+    }
+
+    #submit-button{
+      background-color: #AA47BC;
+      color: white;
+      width: 523px;
+      height: 40px;
+    }
+
+    #error{
+      color: red;
+
+    }
+
+
+
+    </style>
+
+
+</head>
+
+<body>
+
+<div id="container">
+<form id="validationFrom">
+
+  <label for="email-name">Full Name</label>
+  <input id="email-name" class="input-style input-width" type="text" name="name" placeholder="Enter your name">
+
+  <label for="email-address">Email</label>
+  <input id="email-address" class="input-style input-width" type="text" name="email" placeholder="Enter your email">
+
+  <label for="mail-gender">Gender</label>
+  <select id="email-gender" class="input-style"  name="gender">
+    <option value="male">male</option>
+    <option value="female">female</option>
+  </select>
+
+  <label for="pass1">password</label>
+  <input id="pass" class="input-style input-width" type="password" name="pass1" placeholder="password">
+
+  <label for="pass2">confirm password</label>
+  <input id="pass2" class="input-style input-width" type="password" name="pass2" placeholder="confirm password">
+
+  <textarea id="mail-massage" class="input-style" name="message" rows="8" cols="88" placeholder="discript your feel"></textarea>
+  <button id="submit-button" class="input-style" type="submit" name="submit">send Email</button>
+</form>
+<div id="error" ></div>
+</div>
+
+<script type="text/javascript">
+$("#validationFrom").submit(function(event){
+
+    var errorMessage="";
+    event.preventDefault();
+    var name=$("#email-name").val();
+    var email=$("#email-address").val();
+    var pass1=$("#pass1").val();
+    var pass2=$("#pass2").val()
+    var message=$("#mail-massage").val();
+
+    function isValidEmailAddress(emailAddress){
+
+      var pattern = /^\b[A-Z0-9-]+@[A-Z0-9]+\.com\b/i;
+
+      return pattern.test(emailAddress);
+
+    }
+
+    if(name == "" || email==""||pass2==""||message==""){
+      errorMessage="error";
+
+    }else if(!isValidEmailAddress(email)){
+
+      errorMessage="your email is wrong";
+    }else if(pass1 != pass2){
+      aerrorMessage="your password is wrong";
+    }
+
+    if (errorMessage==""){
+
+      $("#error").html("confirm");
+      $("#error").css("color","green");
+    }else {
+      $("#error").html(errorMessage);
+      $("#error").css("color","red");
+    }
+
+
+});
+
+</script>
+
+
+</body>
+</html>

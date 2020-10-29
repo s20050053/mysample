@@ -1,0 +1,107 @@
+
+<!DOCTYPE html>
+<html lang="zh-Hant-HK">
+<head>
+    <title>驗證表單</title>
+
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet"
+    href="https://ajax.aspnetcdn.com/ajax/jquery.ui/1.10.4/themes/hot-sneaks/jquery-ui.css">
+
+    <script type="text/javascript"
+    src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript"
+    src="https://ajax.aspnetcdn.com/ajax/jquery.ui/1.10.4/jquery-ui.min.js"></script>
+    <style>
+      #square{
+        width: 200px;
+        height: 200px;
+        background-color: red;
+      }
+
+      #resizable{
+        width:300px;
+        height:300px;
+        background-color: #A6BED1;
+        margin-top: 15px;
+
+      }
+
+    </style>
+
+
+</head>
+
+<body>
+
+  <!-- <div class="ui-wight">
+    <label for="tags">enter your text: </label>
+    <input type="text" id="tags">
+  </div> -->
+
+  <div id="accordion">
+    <h3>Tittle</h3>
+    <p>That is a text. hat is a text.hat is a text.hat is a text.hat is a text.hat is a text.hat is a text.hat is a text.hat is a text.hat is a text.hat is a text.hat is a text.
+    hat is a text.hat is a text.hat is a text.hat is a text.hat is a text.hat is a text.hat is a text.hat is a text.
+  hat is a text.hat is a text.hat is a text.</p>
+
+  <h3>Tittle</h3>
+  <p>That is a text. hat is a text.hat is a text.hat is a text.hat is a text.hat is a text.hat is a text.hat is a text.hat is a text.hat is a text.hat is a text.hat is a text.
+  hat is a text.hat is a text.hat is a text.hat is a text.hat is a text.hat is a text.hat is a text.hat is a text.
+hat is a text.hat is a text.hat is a text.</p>
+
+<h3>Tittle</h3>
+<p>That is a text. hat is a text.hat is a text.hat is a text.hat is a text.hat is a text.hat is a text.hat is a text.hat is a text.hat is a text.hat is a text.hat is a text.
+hat is a text.hat is a text.hat is a text.hat is a text.hat is a text.hat is a text.hat is a text.hat is a text.
+hat is a text.hat is a text.hat is a text.</p>
+
+
+<h3>Tittle</h3>
+<p>That is a text. hat is a text.hat is a text.hat is a text.hat is a text.hat is a text.hat is a text.hat is a text.hat is a text.hat is a text.hat is a text.hat is a text.
+hat is a text.hat is a text.hat is a text.hat is a text.hat is a text.hat is a text.hat is a text.hat is a text.
+hat is a text.hat is a text.hat is a text.</p>
+
+<h3>Tittle</h3>
+<p>That is a text. hat is a text.hat is a text.hat is a text.hat is a text.hat is a text.hat is a text.hat is a text.hat is a text.hat is a text.hat is a text.hat is a text.
+hat is a text.hat is a text.hat is a text.hat is a text.hat is a text.hat is a text.hat is a text.hat is a text.
+hat is a text.hat is a text.hat is a text.</p>
+
+  </div>
+
+<!-- <div id="square"></div>
+<div id="resizable"></div> -->
+
+<script type="text/javascript">
+// $("#square").draggable();
+// // $("#resizable").resizable();
+//
+// $("#resizable").droppable({
+//   drop:function(event,ui){
+//
+//      // alert("已經拖入正方形");
+//
+//      $(this).addClass("ui-state-highlight");
+//    }
+// });
+
+  // $(function(){
+  //   var availableTags=[
+  //     "Apple",
+  //     "Banner"
+  //   ];
+  //
+  //   $("#tags").autocomplete({
+  //     source:availableTags
+  //   });
+  // });
+
+$(function(){
+  $("#accordion").accordion();
+})
+
+</script>
+
+
+</body>
+</html>
